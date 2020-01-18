@@ -1,26 +1,30 @@
 zuihou:
   nginx:
-    ip: 127.0.0.1      # 正式环境需要将该ip设置成nginx对应的 公网ip
+#    ip: 127.0.0.1      # 正式环境需要将该ip设置成nginx对应的 公网ip
+    ip: 111.229.51.50      # 正式环境需要将该ip设置成nginx对应的 公网ip
     port: 10000
   redis:
-    ip: 127.0.0.1
-    port: 16379
-    password: SbtyMveYNfLzTks7H0apCmyStPzWJqjy
+#    ip: 127.0.0.1
+    ip: 111.229.51.50
+#    port: 16379
+    port: 6379
+    password: redis123
     database: 0
   mysql:
-    ip: 127.0.0.1
+#    ip: 127.0.0.1
+    ip: 111.229.51.50
     port: 3306
     driverClassName: com.mysql.cj.jdbc.Driver
     database: zuihou_defaults
     username: root
-    password: root
+    password: 123456
     biz-database: zuihou_base
   rabbitmq:
     enabled: false
-    ip: 127.0.0.1
+    ip: 111.229.51.50
     port: 5672
-    username: zuihou
-    password: zuihou
+    username: guest
+    password: guest
   database:
     isMultiTenant: true   # 是否启用多租户
     isBlockAttack: false  # 是否启用 攻击 SQL 阻断解析器

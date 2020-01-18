@@ -82,6 +82,7 @@ public class ContextHandlerInterceptor extends HandlerInterceptorAdapter {
 
         } catch (Exception e) {
             log.warn("解析token信息时，发生异常. url=" + request.getRequestURI(), e);
+            throw e;
         }
         return super.preHandle(request, response, handler);
     }
